@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Cancelado | Aurum Street</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .cancel-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        .cancel-icon svg {
+            width: 50px;
+            height: 50px;
+            stroke: white;
+            stroke-width: 3;
+        }
+        
+        @keyframes scaleIn {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #ef4444;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            color: #888;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .info-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .info-box p {
+            margin: 10px 0;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+        
+        .info-box strong {
+            color: #D4AF37;
+        }
+        
+        .suggestions {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .suggestions h3 {
+            color: #D4AF37;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .suggestions li {
+            padding: 8px 0;
+            color: #aaa;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .suggestions li::before {
+            content: "→";
+            color: #D4AF37;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #D4AF37 0%, #B8960C 100%);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #D4AF37;
+            color: #D4AF37;
+        }
+        
+        .btn-outline:hover {
+            background: rgba(212, 175, 55, 0.1);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .footer a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cancel-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </div>
+        
+        <h1>Pagamento Cancelado</h1>
+        
+        <p class="subtitle">
+            O pagamento foi cancelado e não foi processado. Nenhum valor foi cobrado do seu cartão.
+        </p>
+        
+        <div class="info-box">
+            <p><strong>Status:</strong> Cancelado pelo usuário</p>
+            <p>Seu carrinho foi preservado e você pode tentar novamente quando quiser.</p>
+        </div>
+        
+        <div class="suggestions">
+            <h3>O que você pode fazer:</h3>
+            <ul>
+                <li>Tentar novamente com o mesmo método de pagamento</li>
+                <li>Escolher outro método de pagamento (PIX ou Cartão)</li>
+                <li>Verificar se os dados do cartão estão corretos</li>
+                <li>Entrar em contato com seu banco se necessário</li>
+            </ul>
+        </div>
+        
+        <a href="index.html" class="btn">Tentar Novamente</a>
+        <a href="#" class="btn btn-outline">Falar no WhatsApp</a>
+        
+        <div class="footer">
+            <p>Dúvidas? Fale conosco via <a href="#">Direct</a> ou <a href="#">WhatsApp</a></p>
+            <p style="margin-top: 10px;">&copy; 2024 Aurum Street. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="#121212"/>
+  
+  <!-- Diamond Shape (Aurum = Gold) -->
+  <polygon points="256,60 452,200 452,312 256,452 60,312 60,200" fill="#d4af37"/>
+  
+  <!-- Inner Diamond Outline -->
+  <polygon points="256,100 402,210 402,302 256,412 110,302 110,210" fill="none" stroke="#1a1a1a" stroke-width="8"/>
+  
+  <!-- Letter A stylized -->
+  <text x="256" y="310" font-family="Arial Black, sans-serif" font-size="200" font-weight="900" fill="#1a1a1a" text-anchor="middle">A</text>
+  
+  <!-- Shine effect -->
+  <ellipse cx="200" cy="180" rx="60" ry="30" fill="rgba(255,255,255,0.15)" transform="rotate(-45 200 180)"/>
+</svg>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento Aprovado | Aurum Street</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(30, 30, 30, 0.9);
+            border-radius: 20px;
+            padding: 50px 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        .success-icon {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out;
+        }
+        
+        .success-icon svg {
+            width: 50px;
+            height: 50px;
+            stroke: white;
+            stroke-width: 3;
+        }
+        
+        @keyframes scaleIn {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); opacity: 1; }
+        }
+        
+        h1 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: #D4AF37;
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .order-info {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .order-info p {
+            margin: 10px 0;
+            color: #ccc;
+        }
+        
+        .order-info strong {
+            color: #D4AF37;
+        }
+        
+        .email-notice {
+            background: rgba(212, 175, 55, 0.1);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .email-notice h3 {
+            color: #D4AF37;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        
+        .email-notice p {
+            font-size: 0.9rem;
+            color: #aaa;
+            line-height: 1.5;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #D4AF37 0%, #B8960C 100%);
+            color: #000;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3);
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer p {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        
+        .footer a {
+            color: #D4AF37;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+        </div>
+        
+        <h1>Pagamento Aprovado!</h1>
+        
+        <p class="subtitle">
+            Obrigado pela sua compra na Aurum Street. Seu pagamento foi processado com sucesso.
+        </p>
+        
+        <div class="order-info">
+            <p>Número do Pedido: <strong>#ORD-<?php echo date('Ymd') . '-' . rand(1000, 9999); ?></strong></p>
+            <p>Status: <strong style="color: #22c55e;">Aprovado</strong></p>
+        </div>
+        
+        <div class="email-notice">
+            <h3>📧 Confirmação por E-mail</h3>
+            <p>Você receberá um e-mail de confirmação com todos os detalhes do seu pedido, incluindo informações de rastreamento.</p>
+        </div>
+        
+        <a href="index.html" class="btn">Voltar para a Loja</a>
+        
+        <div class="footer">
+            <p>Dúvidas? Fale conosco via <a href="#">Direct</a> ou <a href="#">WhatsApp</a></p>
+            <p style="margin-top: 10px;">&copy; 2024 Aurum Street. Todos os direitos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>

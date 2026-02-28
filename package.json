@@ -1,0 +1,17 @@
+{
+    "name": "aurum-street-invictuspay",
+    "version": "1.0.0",
+    "description": "Aurum Street E-commerce with InvictusPay Integration",
+    "main": "netlify/functions/checkout.js",
+    "scripts": {
+        "dev": "netlify dev",
+        "build": "echo 'No build step needed'",
+        "start": "netlify dev"
+    },
+    "keywords": ["e-commerce", "invictuspay", "netlify"],
+    "author": "Aurum Street",
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^1.6.0"
+    }
+}

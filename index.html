@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#D4AF37">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Aurum Street - Streetwear exclusivo e sneakers premium. Комpre camisetas, tênis, kits e acessórios Nike, Nocta e mais. Frete grátis para todo o Brasil.">
+    <meta name="keywords" content="streetwear, moda urbana, nike, nocta, sneakers, tênis, camisetas, kits, acessórios, freте grátis, brasil">
+    <meta name="author" content="Aurum Street">
+    <meta name="copyright" content="© 2025 Aurum Street. Todos os direitos reservados.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aurumstreet.com.br/">
+    <meta property="og:title" content="Aurum Street | Streetwear Exclusivo">
+    <meta property="og:description" content="Streetwear exclusivo para quem define tendências. Frete grátis para todo o Brasil.">
+    <meta property="og:image" content="https://aurumstreet.com.br/favicon.svg">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aurumstreet.com.br/">
+    <meta property="twitter:title" content="Aurum Street | Streetwear Exclusivo">
+    <meta property="twitter:description" content="Streetwear exclusivo para quem define tendências. Frete grátis para todo o Brasil.">
+    <meta property="twitter:image" content="https://aurumstreet.com.br/favicon.svg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aurumstreet.com.br/">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Preconnect para Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" defer></script>
+    
+    <!-- Structured Data - JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Aurum Street",
+        "description": "Streetwear exclusivo e sneakers premium",
+        "url": "https://aurumstreet.com.br",
+        "logo": "https://aurumstreet.com.br/favicon.svg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-11-91666-3755",
+            "contactType": "customer service",
+            "availableLanguage": "Portuguese"
+        },
+        "sameAs": [
+            "https://www.instagram.com/aurum.street"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "addressCountry": "BR"
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#catalog" class="skip-link">Pular para o conteúdo principal</a>
+
+    <!-- Maintenance Notice -->
+    <div class="maintenance-notice" id="maintenanceNotice">
+        <div class="maintenance-content">
+            <button class="maintenance-close" id="maintenanceClose">&times;</button>
+            <div class="maintenance-icon">⚠️</div>
+            <h2 class="maintenance-title">Aviso Importante</h2>
+            <div class="maintenance-text">
+                <p>A Aurum Street pede desculpas pelo transtorno.</p>
+                <p>Nosso site está passando por manutenção na vitrine.</p>
+                <p>Caso não encontre o produto desejado, entre em contato via Direct ou WhatsApp.</p>
+            </div>
+            <p class="maintenance-footer">Atenciosamente,<br>Equipe Aurum Street</p>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <img src="favicon.svg" alt="Aurum Street" class="logo-icon-svg">
+                <span class="logo-text">AURUM STREET</span>
+            </a>
+            
+            <nav class="nav-menu">
+                <a href="#" class="nav-link active" data-category="all">Todos</a>
+                <a href="#" class="nav-link" data-category="roupas">Roupas</a>
+                <a href="#" class="nav-link" data-category="acessorios">Acessórios</a>
+                <a href="#" class="nav-link" data-category="tenis">Tenis</a>
+                <a href="#" class="nav-link" data-category="kits">Kits</a>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="user-btn" id="userBtn" aria-label="Minha conta" title="Minha conta">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                    <span class="user-status" id="userStatus" aria-live="polite"></span>
+                </button>
+                <button class="cart-btn" id="cartBtn" aria-label="Carrinho de compras" title="Carrinho">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <span class="cart-count" id="cartCount" aria-live="polite" aria-label="Itens no carrinho">0</span>
+                </button>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="navMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">ELEVE SEU ESTILO</h1>
+            <p class="hero-subtitle">Streetwear exclusivo para quem define tendências</p>
+            <a href="#catalog" class="hero-btn">Ver Coleção</a>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <span class="promo-icon">🚚</span>
+                <span class="promo-text">FRETE GRÁTIS PARA TODO O BRASIL</span>
+                <span class="promo-text">|</span>
+                <span class="promo-text">NOCTA X NIKE: 3 POR R$150</span>
+                <span class="promo-icon">🚚</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog -->
+    <section class="catalog" id="catalog">
+        <div class="container">
+            <h2 class="section-title">Nossa Coleção</h2>
+            
+            <div class="filters" role="group" aria-label="Filtros de categoria">
+                <button class="filter-btn active" data-category="all" aria-pressed="true">Todos</button>
+                <button class="filter-btn" data-category="roupas" aria-pressed="false">Roupas</button>
+                <button class="filter-btn" data-category="acessorios" aria-pressed="false">Acessórios</button>
+                <button class="filter-btn" data-category="tenis" aria-pressed="false">Tenis</button>
+                <button class="filter-btn" data-category="kits" aria-pressed="false">Kits</button>
+            </div>
+            
+            <div class="products-grid" id="productsGrid"></div>
+        </div>
+    </section>
+
+    <!-- Size Guide Modal -->
+    <div class="modal" id="sizeGuideModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content size-guide-content">
+            <button class="modal-close" id="closeSizeGuide">&times;</button>
+            <h2 class="modal-title">Guia de Medidas</h2>
+            
+            <div class="size-tabs">
+                <button class="size-tab active" data-size-type="camisetas">Camisetas</button>
+                <button class="size-tab" data-size-type="calcas">Calças</button>
+                <button class="size-tab" data-size-type="tenis">Tenis</button>
+            </div>
+            
+            <div class="size-tables">
+                <div class="size-table active" id="sizeCamisetas">
+                    <table>
+                        <thead><tr><th>Tamanho</th><th>Largura</th><th>Comprimento</th><th>Manga</th></tr></thead>
+                        <tbody>
+                            <tr><td>P</td><td>50</td><td>70</td><td>22</td></tr>
+                            <tr><td>M</td><td>53</td><td>73</td><td>23</td></tr>
+                            <tr><td>G</td><td>56</td><td>76</td><td>24</td></tr>
+                            <tr><td>GG</td><td>59</td><td>79</td><td>25</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="size-table" id="sizeCalcas">
+                    <table>
+                        <thead><tr><th>Tamanho</th><th>Cintura</th><th>Quadril</th><th>Comprimento</th></tr></thead>
+                        <tbody>
+                            <tr><td>38</td><td>68-72</td><td>88-92</td><td>98</td></tr>
+                            <tr><td>40</td><td>72-76</td><td>92-96</td><td>100</td></tr>
+                            <tr><td>42</td><td>76-80</td><td>96-100</td><td>102</td></tr>
+                            <tr><td>44</td><td>80-84</td><td>100-104</td><td>104</td></tr>
+                            <tr><td>46</td><td>84-88</td><td>104-108</td><td>106</td></tr>
+                            <tr><td>48</td><td>88-92</td><td>108-112</td><td>108</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="size-table" id="sizeTenis">
+                    <table>
+                        <thead><tr><th>Número</th><th>Brasil</th><th>CM</th><th>EUR</th></tr></thead>
+                        <tbody>
+                            <tr><td>36</td><td>36</td><td>23,5</td><td>37,5</td></tr>
+                            <tr><td>37</td><td>37</td><td>24</td><td>38</td></tr>
+                            <tr><td>38</td><td>38</td><td>24,5</td><td>39</td></tr>
+                            <tr><td>39</td><td>39</td><td>25</td><td>39,5</td></tr>
+                            <tr><td>40</td><td>40</td><td>26</td><td>40</td></tr>
+                            <tr><td>41</td><td>41</td><td>27</td><td>42</td></tr>
+                            <tr><td>42</td><td>42</td><td>27,5</td><td>42,5</td></tr>
+                            <tr><td>43</td><td>43</td><td>28</td><td>43</td></tr>
+                            <tr><td>44</td><td>44</td><td>29</td><td>44</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content product-modal-content">
+            <button class="modal-close" id="closeProduct">&times;</button>
+            
+            <div class="product-modal-grid">
+                <div class="product-gallery">
+                    <div class="main-image">
+                        <img id="modalMainImage" src="" alt="Produto">
+                    </div>
+                    <div class="thumbnail-list" id="modalThumbnails"></div>
+                </div>
+                
+                <div class="product-info-modal">
+                    <span class="product-category-tag" id="modalCategory"></span>
+                    <h2 class="product-title-modal" id="modalTitle"></h2>
+                    
+                    <div class="product-price-modal">
+                        <span class="current-price" id="modalPrice"></span>
+                        <span class="original-price" id="modalOriginalPrice"></span>
+                    </div>
+                    
+                    <div class="product-promo-badge" id="modalPromoBadge"></div>
+                    
+                    <p class="product-description" id="modalDescription"></p>
+                    
+                    <div class="color-selector" id="colorSelector">
+                        <label>Cor:</label>
+                        <div class="color-options" id="colorOptions"></div>
+                    </div>
+                    
+                    <div class="size-selector" id="sizeSelector">
+                        <label>Tamanho: <button class="size-guide-link" id="openSizeGuide">Ver guia</button></label>
+                        <div class="size-options" id="sizeOptions"></div>
+                    </div>
+                    
+                    <div class="slide-size-selector" id="slideSizeSelector" style="display: none;">
+                        <label id="slideSizeLabel">Tamanho do Slide:</label>
+                        <div class="size-options" id="slideSizeOptions"></div>
+                    </div>
+                    
+                    <div class="quantity-selector">
+                        <label>Quantidade:</label>
+                        <div class="quantity-controls">
+                            <button class="qty-btn" id="qtyMinus">-</button>
+                            <input type="number" id="qtyInput" value="1" min="1" max="10">
+                            <button class="qty-btn" id="qtyPlus">+</button>
+                        </div>
+                    </div>
+                    
+                    <div id="specialPromo"></div>
+                    
+                    <button class="add-to-cart-btn" id="addToCartBtn">ADICIONAR AO CARRINHO</button>
+                    
+                    <div class="product-meta">
+                        <span class="meta-item">🚚 Frete Grátis Brasil</span>
+                        <span class="meta-item">🔒 Compra Segura</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h3>Seu Carrinho</h3>
+            <button class="cart-close" id="closeCart">&times;</button>
+        </div>
+        
+        <div class="cart-items" id="cartItems"></div>
+        
+        <div class="cart-empty" id="cartEmpty">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <p>Seu carrinho está vazio</p>
+        </div>
+        
+        <div class="cart-footer" id="cartFooter">
+            <div class="cart-subtotal">
+                <span>Subtotal</span>
+                <span id="cartSubtotal">R$ 0,00</span>
+            </div>
+            
+            <div class="cart-discount" id="cartDiscount" style="display: none;"></div>
+            
+            <div class="cart-total">
+                <span>Total</span>
+                <span id="cartTotal">R$ 0,00</span>
+            </div>
+            
+            <button class="checkout-btn" id="checkoutBtn">FINALIZAR COMPRA</button>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <span id="toastMessage"></span>
+    </div>
+
+    <!-- User Login/Register Modal -->
+    <div class="modal" id="userModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content user-modal-content">
+            <button class="modal-close" id="closeUserModal">&times;</button>
+            
+            <div class="user-modal-header">
+                <img src="favicon.svg" alt="Aurum Street" class="user-modal-logo">
+                <h2 class="user-modal-title" id="userModalTitle">Login</h2>
+            </div>
+            
+            <!-- Login Form -->
+            <form id="loginForm" class="user-form">
+                <div class="form-group">
+                    <label for="loginUsername">Usuário</label>
+                    <input type="text" id="loginUsername" name="username" placeholder="Seu usuário" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="loginPassword">Senha</label>
+                    <input type="password" id="loginPassword" name="password" placeholder="Sua senha" required>
+                </div>
+                
+                <div class="form-group remember-me">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberLogin">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Lembrar meu login</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="user-submit-btn">Entrar</button>
+                
+                <div class="user-modal-footer">
+                    <span id="toggleToRegister">Não tem conta? <button type="button" class="toggle-btn">Cadastre-se</button></span>
+                    <span id="toggleToLogin" style="display: none;">Já tem conta? <button type="button" class="toggle-btn">Faça Login</button></span>
+                </div>
+            </form>
+            
+            <!-- Register Form -->
+            <form id="registerForm" class="user-form" style="display: none;">
+                <div class="form-group">
+                    <label for="registerName">Nome Completo</label>
+                    <input type="text" id="registerName" name="name" placeholder="Seu nome completo" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerUsername">Usuário</label>
+                    <input type="text" id="registerUsername" name="username" placeholder="Escolha um usuário" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerEmail">E-mail</label>
+                    <input type="email" id="registerEmail" name="email" placeholder="seu@email.com" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerPassword">Senha</label>
+                    <input type="password" id="registerPassword" name="password" placeholder="Crie uma senha" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="registerConfirmPassword">Confirmar Senha</label>
+                    <input type="password" id="registerConfirmPassword" name="confirmPassword" placeholder="Confirme sua senha" required>
+                </div>
+                
+                <div class="form-group remember-me">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberRegister">
+                        <span class="checkbox-custom"></span>
+                        <span class="checkbox-text">Lembrar meu login</span>
+                    </label>
+                </div>
+                
+                <button type="submit" class="user-submit-btn">Cadastrar</button>
+                
+                <div class="user-modal-footer">
+                    <span id="toggleToLoginFromRegister">Já tem conta? <button type="button" class="toggle-btn">Faça Login</button></span>
+                </div>
+            </form>
+            
+            <!-- Logged In View -->
+            <div id="loggedInView" class="logged-in-view" style="display: none;">
+                <div class="logged-in-header">
+                    <div class="logged-in-avatar">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="12" cy="7" r="4"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="logged-in-name" id="loggedInName">Usuário</h3>
+                    <p class="logged-in-username" id="loggedInUsername">@usuario</p>
+                </div>
+                
+                <div class="logged-in-info">
+                    <div class="info-item">
+                        <span class="info-label">E-mail</span>
+                        <span class="info-value" id="loggedInEmail">-</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">Membro desde</span>
+                        <span class="info-value" id="loggedInDate">-</span>
+                    </div>
+                </div>
+                
+                <button type="button" class="user-submit-btn logout-btn" id="logoutBtn">Sair da Conta</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Required Modal -->
+    <div class="modal" id="loginRequiredModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content login-required-content">
+            <button class="modal-close" id="closeLoginRequired">&times;</button>
+            <div class="login-required-icon">🔒</div>
+            <h2 class="login-required-title">Atenção</h2>
+            <p class="login-required-text">Para finalizar sua compra, você precisa fazer login ou criar uma conta em nossa loja.</p>
+            <button class="login-required-btn login-btn" id="goToLoginBtn">Fazer Login</button>
+            <button class="login-required-btn register-btn" id="goToRegisterBtn">Cadastrar-se</button>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons Group -->
+    <div class="floating-actions" id="floatingActions">
+        <!-- Cart Button -->
+        <button class="floating-cart-btn" id="floatingCartBtn" title="Ver Carrinho">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                <span class="floating-cart-count" id="floatingCartCount">0</span>
+            </svg>
+        </button>
+        
+        <!-- Back to Top Button -->
+        <button class="floating-back-to-top-btn" id="backToTopBtn" title="Voltar ao topo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div class="modal" id="checkoutModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content checkout-modal-content">
+            <button class="modal-close" id="closeCheckout">&times;</button>
+            
+            <div class="checkout-header">
+                <div class="checkout-logo">
+                    <img src="favicon.svg" alt="Aurum Street" class="checkout-logo-icon">
+                    <span class="checkout-brand">AURUM STREET</span>
+                </div>
+                <h2 class="checkout-title">Finalizar Compra</h2>
+                <p class="checkout-subtitle">Preencha seus dados para prosseguir</p>
+            </div>
+            
+            <div class="checkout-summary">
+                <div class="checkout-summary-row">
+                    <span>Total a pagar:</span>
+                    <span class="checkout-total" id="checkoutTotal">R$ 0,00</span>
+                </div>
+            </div>
+            
+            <form id="checkoutForm" class="checkout-form">
+                <!-- Abas do Formulário -->
+                <div class="checkout-tabs">
+                    <div class="checkout-tab active" data-tab="personal">
+                        <span class="tab-number">1</span>
+                        <span class="tab-label">Pessoais</span>
+                    </div>
+                    <div class="checkout-tab" data-tab="address">
+                        <span class="tab-number">2</span>
+                        <span class="tab-label">Endereço</span>
+                    </div>
+                    <div class="checkout-tab" data-tab="payment">
+                        <span class="tab-number">3</span>
+                        <span class="tab-label">Pagamento</span>
+                    </div>
+                </div>
+                
+                <!-- Etapa 1: Dados Pessoais -->
+                <div class="checkout-step active" id="stepPersonal">
+                    <div class="step-title">Dados Pessoais</div>
+                    
+                    <div class="form-group">
+                        <label for="customerName">Nome Completo *</label>
+                        <input type="text" id="customerName" name="name" placeholder="Seu nome completo" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="customerEmail">E-mail *</label>
+                            <input type="email" id="customerEmail" name="email" placeholder="seu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="customerPhone">Telefone *</label>
+                            <input type="tel" id="customerPhone" name="phone" placeholder="(00) 00000-0000" maxlength="15" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customerCPF">CPF *</label>
+                        <input type="text" id="customerCPF" name="cpf" placeholder="000.000.000-00" maxlength="14" inputmode="numeric" pattern="\d{11}" required>
+                        <span class="form-hint">Necessário para nota fiscal (11 dígitos)</span>
+                    </div>
+                    
+                    <button type="button" class="checkout-submit-btn next-step-btn" id="nextToAddressBtn">
+                        Próximo: Endereço →
+                    </button>
+                </div>
+                
+                <!-- Etapa 2: Endereço -->
+                <div class="checkout-step" id="stepAddress">
+                    <div class="step-title">Endereço de Entrega</div>
+                    
+                    <div class="form-group">
+                        <label for="customerCEP">CEP *</label>
+                        <input type="text" id="customerCEP" name="cep" placeholder="00000-000" maxlength="9" required>
+                        <span class="form-hint" id="cepHint">Digite o CEP manualmente</span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label for="customerAddress">Logradouro *</label>
+                            <input type="text" id="customerAddress" name="address" placeholder="Rua, Avenida, etc." required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="customerNumber">Número *</label>
+                            <input type="text" id="customerNumber" name="number" placeholder="123" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customerComplement">Complemento</label>
+                        <input type="text" id="customerComplement" name="complement" placeholder="Apto, Bloco, Casa, etc.">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="customerNeighborhood">Bairro *</label>
+                        <input type="text" id="customerNeighborhood" name="neighborhood" placeholder="Seu bairro" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group" style="flex: 2;">
+                            <label for="customerCity">Cidade *</label>
+                            <input type="text" id="customerCity" name="city" placeholder="Sua cidade" required>
+                        </div>
+                        <div class="form-group" style="flex: 1;">
+                            <label for="customerState">Estado *</label>
+                            <select id="customerState" name="state" required>
+                                <option value="">UF</option>
+                                <option value="AC">AC</option>
+                                <option value="AL">AL</option>
+                                <option value="AP">AP</option>
+                                <option value="AM">AM</option>
+                                <option value="BA">BA</option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="ES">ES</option>
+                                <option value="GO">GO</option>
+                                <option value="MA">MA</option>
+                                <option value="MT">MT</option>
+                                <option value="MS">MS</option>
+                                <option value="MG">MG</option>
+                                <option value="PA">PA</option>
+                                <option value="PB">PB</option>
+                                <option value="PR">PR</option>
+                                <option value="PE">PE</option>
+                                <option value="PI">PI</option>
+                                <option value="RJ">RJ</option>
+                                <option value="RN">RN</option>
+                                <option value="RS">RS</option>
+                                <option value="RO">RO</option>
+                                <option value="RR">RR</option>
+                                <option value="SC">SC</option>
+                                <option value="SP">SP</option>
+                                <option value="SE">SE</option>
+                                <option value="TO">TO</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="checkout-submit-btn back-step-btn" id="backToPersonalBtn">
+                            ← Voltar
+                        </button>
+                        <button type="button" class="checkout-submit-btn" id="nextToPaymentBtn">
+                            Próximo: Pagamento →
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Etapa 3: Pagamento -->
+                <div class="checkout-step" id="stepPayment">
+                    <div class="step-title">Forma de Pagamento</div>
+                    
+                    <div class="form-group">
+                        <label for="paymentMethod">Método de Pagamento *</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Selecione...</option>
+                            <option value="pix">PIX - À vista</option>
+                            <option value="credit_card">Cartão de Crédito</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group" id="installmentsGroup" style="display: none;">
+                        <label for="installments">Parcelas *</label>
+                        <select id="installments" name="installments">
+                            <option value="1">1x sem juros</option>
+                            <option value="2">2x sem juros</option>
+                            <option value="3">3x sem juros</option>
+                            <option value="4">4x sem juros</option>
+                            <option value="5">5x sem juros</option>
+                            <option value="6">6x sem juros</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Campos de Cartão de Crédito -->
+                    <div id="creditCardFields" style="display: none;">
+                        <div class="form-group">
+                            <label for="cardNumber">Número do Cartão *</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cardHolder">Nome no Cartão *</label>
+                            <input type="text" id="cardHolder" name="cardHolder" placeholder="Nome como está no cartão">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="cardExpiry">Validade *</label>
+                                <input type="text" id="cardExpiry" name="cardExpiry" placeholder="MM/AA" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cardCVV">CVV *</label>
+                                <input type="text" id="cardCVV" name="cardCVV" placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-error" id="checkoutError" style="display: none;">
+                        <span></span>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="checkout-submit-btn back-step-btn" id="backToAddressBtn">
+                            ← Voltar
+                        </button>
+                        <button type="submit" class="checkout-submit-btn">Finalizar Pagamento</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div class="checkout-loading" id="checkoutLoading" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processando...</p>
+            </div>
+
+            <div class="checkout-content" id="checkoutContent" style="display: none;"></div>
+
+            <div class="checkout-footer">
+                <div class="checkout-secure">🔒 Pagamento 100% Seguro</div>
+                <div class="checkout-methods">
+                    <img src="images/PaymentLogos/Logos Atualizadas/image.png" alt="Cartões" class="payment-small">
+                    <img src="images/PaymentLogos/Logos Atualizadas/pix.png" alt="Pix" class="payment-small">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Footer -->
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Sobre a Aurum Street -->
+                <div class="footer-section">
+                    <h4>AURUM STREET</h4>
+                    <p>Streetwear exclusivo para quem define tendências. Qualidade premium e estilo urbano em cada peça.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/aurum.street" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/5511916663755" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="WhatsApp">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                            </svg>
+                        </a>
+                        <a href="mailto:aurumstreet1@gmail.com" class="social-link" aria-label="Email">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links Rápidos -->
+                <div class="footer-section">
+                    <h4>FALE CONOSCO</h4>
+                    <ul>
+                        <li><a href="https://wa.me/5511916663755?text=Olá,%20gostaria%20de%20tirar%20umas%20dúvidas" target="_blank" rel="noopener noreferrer">Tirar Dúvidas</a></li>
+                        <li><a href="https://wa.me/5511916663755?text=Olá,%20gostaria%20de%20rastrear%20meu%20pedido" target="_blank" rel="noopener noreferrer">Rastrear Pedido</a></li>
+                        <li><a href="https://wa.me/5511916663755?text=Olá,%20gostaria%20de%20fazer%20um%20pedido%20personalizado" target="_blank" rel="noopener noreferrer">Pedido Personalizado</a></li>
+                        <li><a href="#catalog">Catálogo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal -->
+                <div class="footer-section">
+                    <h4>LEGAL</h4>
+                    <ul>
+                        <li><a href="#" onclick="showTerms('terms'); return false;">Termos de Uso</a></li>
+                        <li><a href="#" onclick="showTerms('privacy'); return false;">Política de Privacidade</a></li>
+                        <li><a href="#" onclick="showTerms('shipping'); return false;">Política de Entregas</a></li>
+                        <li><a href="#" onclick="showTerms('returns'); return false;">Política de Trocas e Devoluções</a></li>
+                    </ul>
+                </div>
+
+                <!-- Formas de Pagamento -->
+                <div class="footer-section">
+                    <h4>FORMAS DE PAGAMENTO</h4>
+                    <p style="margin-bottom: 16px; font-size: 13px; color: var(--color-text-muted);">Pagamento 100% seguro</p>
+                    <div class="payment-methods">
+                        <img src="images/PaymentLogos/Logos Atualizadas/image.png" alt="Cartões de Crédito e Débito" class="payment-img-logo" title="Cartões de Crédito e Débito">
+                        <img src="images/PaymentLogos/Logos Atualizadas/pix.png" alt="PIX" class="payment-img-logo" title="PIX">
+                    </div>
+                    <div class="payment-badges">
+                        <span class="payment-badge">🔒 SSL Secure</span>
+                        <span class="payment-badge">✓ Compra Segura</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <p>&copy; 2025 Aurum Street. Todos os direitos reservados.</p>
+                    <p class="footer-cnpj">CNPJ: 52.XXX.XXX/0001-XX</p>
+                </div>
+                <div class="footer-bottom-right">
+                    <p>Desenvolvido por <strong>Aurum Street</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Termos e Políticas -->
+    <div class="modal" id="termsModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content terms-modal-content">
+            <button class="modal-close" id="closeTerms">&times;</button>
+            <div class="terms-header">
+                <h2 class="terms-title" id="termsTitle">Termos de Uso</h2>
+            </div>
+            <div class="terms-body" id="termsBody">
+                <!-- Conteúdo será preenchido via JavaScript -->
+            </div>
+            <div class="terms-footer">
+                <button class="terms-close-btn" id="closeTermsBtn">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

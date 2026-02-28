@@ -1,0 +1,27 @@
+[build]
+  command = "echo 'No build required for serverless functions'"
+  publish = "."
+  functions = "netlify/functions"
+
+[dev]
+  command = "netlify dev"
+  port = 3000
+  targetPort = 3000
+  autoLaunch = false
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["axios"]
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Cache-Control = "no-cache"
