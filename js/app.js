@@ -298,7 +298,70 @@ const products = [
         badge: 'NOVO',
         isOffer: true,
         product_hash: 'ba4f9sl2y4'
-    }
+    },
+    {
+        id: 'conjunto-nk-academy-preto-branco',
+        name: 'Conjunto NK Academy Dri Fit Verão',
+        category: 'roupas',
+        categoryLabel: 'Roupas',
+        tabLabel: 'Aba 2',
+        price: 120,
+        originalPrice: 150,
+        description: 'Conjunto NK Academy Dri Fit Verão nas cores preto e branco. Conforto, respirabilidade e muito estilo para o seu dia a dia e treinos.',
+        sizes: ['P', 'M', 'G'],
+        colors: [{ name: 'Preto/Branco', hex: '#000000', image: 'conjunto-nike-academy-preto-branco.png'}],
+        images: ['conjunto-nike-academy-preto-branco.png'],
+        badge: 'OFERTA',
+        isOffer: true,
+        product_hash: 'cjnkacad01'
+    },
+    {
+        id: 'conjunto-nk-azul-marinho',
+        name: 'Conjunto NK Azul Marinho',
+        category: 'roupas',
+        categoryLabel: 'Roupas',
+        tabLabel: 'Aba 2',
+        price: 120,
+        originalPrice: 150,
+        description: 'Conjunto NK Azul Marinho. Conforto, respirabilidade e muito estilo para o seu dia a dia e treinos.',
+        sizes: ['P', 'M', 'G'],
+        colors: [{ name: 'Azul Marinho', hex: '#000080', image: 'conjunto-nk-azul-marinho.png' }],
+        images: ['conjunto-nk-azul-marinho.png'],
+        badge: 'OFERTA',
+        isOffer: true,
+        product_hash: 'cjnkazul01'
+    },
+    {
+        id: 'conjunto-nk-tech-branco',
+        name: 'Conjunto NK Tech Branco',
+        category: 'roupas',
+        categoryLabel: 'Roupas',
+        tabLabel: 'Aba 2',
+        price: 300,
+        originalPrice: 450,
+        description: 'Conjunto NK Tech Branco. Design moderno, conforto e máxima exclusividade para o seu estilo.',
+        sizes: ['P', 'M', 'G'],
+        colors: [{ name: 'Branco', hex: '#FFFFFF', image: 'conjunto-nk-tech-branco.png' }],
+        images: ['conjunto-nk-tech-branco.png'],
+        badge: 'OFERTA',
+        isOffer: true,
+        product_hash: 'cjnktechbr01'
+    },
+    {
+        id: 'kit-nk-athletics-tm',
+        name: 'Kit NK Athletics + TM',
+        category: 'kits',
+        categoryLabel: 'Kits',
+        tabLabel: 'Aba 2',
+        price: 749.99,
+        description: 'Kit NK Athletics + TM. Design exclusivo, conforto e máximo estilo para o seu dia a dia.',
+        sizes: ['P', 'M', 'G'],
+        colors: [{ name: 'Padrão', hex: '#111111', image: 'kit-nk-athletics+tm.png' }],
+        images: ['kit-nk-athletics+tm.png'],
+        badge: 'NOVO',
+        isOffer: false,
+        product_hash: 'kitnkath01'
+    },
 ];
 
 // ========================================
