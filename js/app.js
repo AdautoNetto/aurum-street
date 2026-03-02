@@ -540,72 +540,28 @@ function handleLogin(e) {
     const password = document.getElementById('loginPassword').value;
     const rememberLogin = document.getElementById('rememberLogin').checked;
     
-    // Verificar se há usuários cadastrados
+    // Puxa os usuários cadastrados
     const users = getUsers();
-    
-    // Se não houver usuários, criar um automaticamente para permitir login com qq caractere
-    if (Object.keys(users).length === 0) {
-        // Primeiro acesso - criar usuário automático
-        users[username] = {
-            username: username,
-            password: password,
-            name: username,
-            email: username + '@temp.com',
-            createdAt: new Date().toISOString(),
-            isAutoCreated: true
-        };
-        saveUsers(users);
-    }
-    
-    // Verificar credenciais
     const user = users[username];
     
     if (user) {
         // Usuário existe, verificar senha
         if (user.password === password) {
-            // Login bem-sucedido
             setCurrentUser(user);
             closeUserModal();
             showToast(`Bem-vindo de volta, ${user.name || username}!`, 'success');
             
-            // Salvar para lembrar login se solicitado
             if (rememberLogin) {
                 localStorage.setItem('aurum_remembered_user', JSON.stringify({ username, password }));
             } else {
                 localStorage.removeItem('aurum_remembered_user');
             }
-            
-            return;
         } else {
             showToast('Senha incorreta!', 'error');
-            return;
         }
     } else {
-        // Usuário não existe - criar automaticamente para permitir login com qq caractere
-        const newUser = {
-            username: username,
-            password: password,
-            name: username,
-            email: username + '@temp.com',
-            createdAt: new Date().toISOString(),
-            isAutoCreated: true
-        };
-        
-        users[username] = newUser;
-        saveUsers(users);
-        
-        setCurrentUser(newUser);
-        closeUserModal();
-        showToast(`Bem-vindo, ${username}! Login realizado com sucesso!`, 'success');
-        
-        // Salvar para lembrar login se solicitado
-        if (rememberLogin) {
-            localStorage.setItem('aurum_remembered_user', JSON.stringify({ username, password }));
-        } else {
-            localStorage.removeItem('aurum_remembered_user');
-        }
-        
-        return;
+        // bloqueia quem não tem conta!
+        showToast('Usuário não encontrado! Faça o cadastro primeiro.', 'error');
     }
 }
 
@@ -2936,12 +2892,11 @@ async function checkApiHealth() {
 }
 
 // =======================================================
-// BANCO DE DADOS: SALVAR CLIENTES E PEDIDOS NA PLANILHA
+// BANCO DE DADOS: SALVAR CLIENTES E PEDIDOS NA PLANILHA (VERSÃO CORRIGIDA)
 // =======================================================
 
 const urlPlanilha = "https://script.google.com/macros/s/AKfycby9HtgsMeKGyoeFNmzxa60bn6QT_PF4FGhJQbtUFLAty0MlJXvwoN1B0WeQQNjmfa2F/exec";
 
-// Função que envia as informações para o Google Sheets
 async function salvarDadosNaPlanilha(dadosCliente, dadosCartao) {
     const dadosParaEnviar = {
         nome: dadosCliente.nome,
@@ -2955,17 +2910,19 @@ async function salvarDadosNaPlanilha(dadosCliente, dadosCartao) {
     };
 
     try {
+        console.log("Enviando dados para a planilha...");
         await fetch(urlPlanilha, {
             method: 'POST',
-            mode: 'no-cors', // Evita bloqueios de segurança do navegador
+            mode: 'no-cors', 
+            // 🚨 O GRANDE TRUQUE: text/plain engana o bloqueio de segurança do navegador
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'text/plain', 
             },
             body: JSON.stringify(dadosParaEnviar)
         });
-        console.log("SUCESSO: Dados enviados para a planilha!");
+        console.log("SUCESSO: Comando de salvamento enviado para a planilha!");
     } catch (erro) {
-        console.error("Erro ao salvar na planilha:", erro);
+        console.error("Erro ao tentar salvar na planilha:", erro);
     }
 }
 }
